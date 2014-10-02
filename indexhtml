@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operations Research - Sequencing - Jhonson's Algorithm for N Jobs and 2 Machines</title>
+<link type="text/css" rel="stylesheet" href="style.css"></link>
+</head>
+<script src="jhonsons_algorithm.js"></script> 
+<body>
+<h1>Sequencing - N Jobs 2 Machines</h1>
+<h3>Enter No of Jobs</h3>
+<input type="text" id="noofjobs">
+<input type="button" id="jobs" value="submit" onclick="gen_jobs_input();" required>
+<br><br>
+<div id="jobs_input_div"></div>
+<div id="mach_values"></div>
+<input type="button" id="read_jobs" value="Read Inputs" onclick="read_inputs()" style="visibility: hidden" />
+<p id="output_area_1"></p>
+<p id="output_area_2"></p>
+<p id="test"></p>
+</body>
+</html>

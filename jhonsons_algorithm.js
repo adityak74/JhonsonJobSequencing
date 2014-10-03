@@ -145,5 +145,18 @@ function read_inputs() {
 		idle_b = parseInt(idle_b,10) + parseInt(parseInt(seq_b_in[k],10) - parseInt(b_out[k-1],10),10);
 	}	
 	
-	test.innerHTML = "<br>idle_a = " + idle_a + "<br>idle_b = " + idle_b + "<br>total = " + total + "<br>a_out = " + a_out + "<br>b_out = " + b_out + "<br>Seq = " + sequence + "<br>Seq_b_in = " + seq_b_in + "<br>Seq_a = " + seq_a + "<br>Seq_b = " + seq_b;
+	test.innerHTML = "<br>Machine 1 Idle Time = " + idle_a + "<br>Machine 2 Idle Time = " + idle_b + "<br>Total Time Elapsed = " + total + "<br>Machine 1 Out = " + a_out + "<br>Machine 2 in = " + seq_b_in +  "<br>Machine 2 Out = " + b_out + "<br>Job Sequence = " + sequence;
+        window.location.hash = '#test';
+       var table = document.getElementById('op_table');
+       table.style.visibility = 'visible';
+       for(k=0;k<jobs;k++)
+       {
+                 var row = table.insertRow(k+1);
+                 var cell1 = row.insertCell(0);
+                 var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                cell1.innerHTML = a_out[k];
+                cell2.innerHTML =  seq_b_in[k];
+                cell3.innerHTML =  b_out[k];
+       }
 }
